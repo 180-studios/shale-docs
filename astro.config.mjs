@@ -7,11 +7,11 @@ const isProd = process.env.NODE_ENV === 'production';
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://180-studios.github.io',
-	base: isProd ? '/ShaleDocs' : '/',
+	base: isProd ? '/Shale-Docs' : '/',
 	integrations: [
 		starlight({
 			title: 'Shale Docs',
-			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/180-studios/ShaleDocs' }],
+			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/180-studios/Shale-Docs' }],
 			customCss: ['./src/styles/custom.css'],
 			sidebar: [
 				{
