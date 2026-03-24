@@ -41,7 +41,7 @@ Shale runs on **Web**, **Desktop**, and is optimized for **iPad and tablets**.
 <iframe
   width="100%"
   height="400"
-  src="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+  src="https://www.youtube.com/embed/dQw4w9WgXcQ"
   frameborder="0"
   allowfullscreen>
 </iframe>
