@@ -34,6 +34,7 @@ export default defineConfig({
 				{
 					label: 'Integrations',
 					items: [
+						{ label: 'Overview', slug: 'integrations/overview' },
 						{ label: 'Unreal Engine', slug: 'integrations/unreal-engine' },
 						{ label: 'Blender', slug: 'integrations/blender' },
 						{ label: 'SketchUp', slug: 'integrations/sketchup' },
