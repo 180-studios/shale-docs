@@ -116,8 +116,10 @@ nav.sidebar a:hover {
   align-items: center !important;
 }
 .hero > img {
-  width: 220px !important;
-  height: 220px !important;
+  max-width: 300px !important;
+  max-height: 300px !important;
+  width: auto !important;
+  height: auto !important;
   object-fit: contain !important;
   align-self: center !important;
 }
