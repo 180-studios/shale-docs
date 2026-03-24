@@ -3,35 +3,32 @@
 
 /* ─── Accent color for both themes ─── */
 :root {
-  --sl-color-accent-low:    #4a1200;
-  --sl-color-accent:        #ef4723;
-  --sl-color-accent-high:   #ff7a55;
-}
-
-/* ─── Starlight dark-theme token overrides ─── */
-:root[data-theme='dark'] {
-  --sl-color-white:         #f5f5f5;
-  --sl-color-gray-1:        #e9e9e9;
-  --sl-color-gray-2:        #aaa;
-  --sl-color-gray-3:        #888;
-  --sl-color-gray-4:        #555;
-  --sl-color-gray-5:        #333;
-  --sl-color-gray-6:        #222;
-  --sl-color-black:         #1a1a1a;
-
-  --sl-color-bg:            #1a1a1a;
-  --sl-color-bg-nav:        rgba(26, 26, 26, 0.85);
-  --sl-color-bg-sidebar:    rgba(22, 22, 22, 0.85);
-  --sl-color-hairline-light: rgba(255, 255, 255, 0.08);
-  --sl-color-hairline:       rgba(255, 255, 255, 0.10);
-
-  /* Typography */
   --sl-font:          'Open Sans', sans-serif;
   --sl-font-mono:     ui-monospace, 'Cascadia Code', 'Source Code Pro', monospace;
   --sl-text-h1:       2.2rem;
   --sl-text-h2:       1.6rem;
   --sl-text-h3:       1.3rem;
   --sl-text-body:     1rem;
+  --sl-color-accent-low:    #4a1200;
+  --sl-color-accent:        #ef4723;
+  --sl-color-accent-high:   #ff7a55;
+}
+
+/* ─── Dark theme overrides ─── */
+:root[data-theme='dark'] {
+  --sl-color-white:          #f5f5f5;
+  --sl-color-gray-1:         #e9e9e9;
+  --sl-color-gray-2:         #aaa;
+  --sl-color-gray-3:         #888;
+  --sl-color-gray-4:         #555;
+  --sl-color-gray-5:         #333;
+  --sl-color-gray-6:         #222;
+  --sl-color-black:          #1a1a1a;
+  --sl-color-bg:             #1a1a1a;
+  --sl-color-bg-nav:         rgba(26, 26, 26, 0.85);
+  --sl-color-bg-sidebar:     rgba(22, 22, 22, 0.85);
+  --sl-color-hairline-light: rgba(255, 255, 255, 0.08);
+  --sl-color-hairline:       rgba(255, 255, 255, 0.10);
 }
 
 /* ─── Headings ─── */
@@ -43,30 +40,58 @@ h1, h2, h3, h4, h5, h6,
   font-weight: 700;
 }
 
-/* ─── Page background with radial glow ─── */
-body {
+/* ─── Dark mode backgrounds ─── */
+[data-theme='dark'] body {
   background-color: #1a1a1a;
-  background-image:
-    radial-gradient(ellipse at top, rgba(239, 71, 35, 0.12) 0%, transparent 55%);
+  background-image: radial-gradient(ellipse at top, rgba(239, 71, 35, 0.12) 0%, transparent 55%);
 }
 
-/* ─── Header / top nav ─── */
-header.header {
+[data-theme='dark'] header.header {
   background: rgba(26, 26, 26, 0.9) !important;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-/* ─── Sidebar ─── */
-.sidebar-pane {
+[data-theme='dark'] .sidebar-pane {
   background: rgba(22, 22, 22, 0.85) !important;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-right: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-/* Active sidebar item — orange left border */
+[data-theme='dark'] pre {
+  background: rgba(30, 30, 30, 0.8) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+}
+
+[data-theme='dark'] .card {
+  background: rgba(30, 30, 30, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+[data-theme='dark'] site-search button[data-open-modal] {
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  background: rgba(30, 30, 30, 0.6);
+}
+
+/* ─── Shared styles (both themes) ─── */
+.card {
+  border-radius: 12px;
+  backdrop-filter: blur(8px);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+}
+
+site-search button[data-open-modal] {
+  border-radius: 6px;
+}
+
+/* Active sidebar item */
 .sidebar-content a[aria-current='page'],
 nav.sidebar a[aria-current='page'] {
   color: #ef4723 !important;
@@ -74,57 +99,15 @@ nav.sidebar a[aria-current='page'] {
   background: rgba(239, 71, 35, 0.08);
 }
 
-/* Sidebar link hover */
 .sidebar-content a:hover,
 nav.sidebar a:hover {
   color: #ef4723;
   transition: color 0.2s ease;
 }
 
-/* ─── Links ─── */
-a {
-  color: #ef4723;
-  transition: color 0.2s ease, transform 0.2s ease;
-}
-a:hover {
-  color: #ff7a55;
-}
-
-/* ─── Buttons / CTAs ─── */
-.sl-markdown-content a.cta-button,
-.hero a {
-  background: #ef4723;
-  color: #fff;
-  border-radius: 6px;
-  padding: 0.55rem 1.2rem;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-  text-decoration: none;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
 .hero a:hover {
   transform: translateY(-3px);
   box-shadow: 0 8px 24px rgba(239, 71, 35, 0.35);
-}
-
-/* ─── Code blocks ─── */
-pre {
-  background: rgba(30, 30, 30, 0.8) !important;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 8px;
-}
-
-/* ─── Cards (if used in MDX) ─── */
-.card {
-  background: rgba(30, 30, 30, 0.7);
-  border: 1px solid rgba(255, 255, 255, 0.10);
-  border-radius: 12px;
-  backdrop-filter: blur(8px);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
 }
 
 /* ─── Hero image ─── */
@@ -137,11 +120,4 @@ pre {
   height: 220px !important;
   object-fit: contain !important;
   align-self: center !important;
-}
-
-/* ─── Search ─── */
-site-search button[data-open-modal] {
-  border: 1px solid rgba(255, 255, 255, 0.10);
-  background: rgba(30, 30, 30, 0.6);
-  border-radius: 6px;
 }
