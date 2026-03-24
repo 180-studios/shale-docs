@@ -13,7 +13,7 @@ Speeding up creative cycles by getting notes, feedback and annotations getting d
 * **Architecture firms** — walk through models and collect structured feedback from stakeholders
 * **VFX teams** — annotate renders and 3D scenes with context-aware notes tied to camera view
 * **Interior Design** — share notes on photos with contractors and give clients a great way to see their new decor
-*
+
 
 ## How it works
 
