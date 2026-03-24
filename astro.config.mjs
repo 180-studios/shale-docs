@@ -20,12 +20,31 @@ export default defineConfig({
 				{
 					label: 'Getting Started',
 					items: [
-						{ label: 'Introduction', slug: 'guides/introduction' },
+						{ label: 'Introduction', slug: 'getting-started/introduction' },
+						{ label: 'Quick Start', slug: 'getting-started/quick-start' },
 					],
 				},
 				{
-					label: 'Reference',
-					autogenerate: { directory: 'reference' },
+					label: 'Annotation',
+					items: [
+						{ label: 'Brush Engine', slug: 'annotation/brush-engine' },
+						{ label: 'Comments & Notes', slug: 'annotation/comments' },
+					],
+				},
+				{
+					label: 'Integrations',
+					items: [
+						{ label: 'Unreal Engine', slug: 'integrations/unreal-engine' },
+						{ label: 'Blender', slug: 'integrations/blender' },
+						{ label: 'SketchUp', slug: 'integrations/sketchup' },
+						{ label: 'Maya', slug: 'integrations/maya' },
+					],
+				},
+				{
+					label: 'Access & Permissions',
+					items: [
+						{ label: 'Managing Users', slug: 'access/managing-users' },
+					],
 				},
 			],
 		}),
