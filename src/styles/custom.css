@@ -126,6 +126,11 @@ pre {
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
 }
 
+/* ─── Hero image ─── */
+.hero img {
+  object-fit: contain !important;
+}
+
 /* ─── Search ─── */
 site-search button[data-open-modal] {
   border: 1px solid rgba(255, 255, 255, 0.10);
