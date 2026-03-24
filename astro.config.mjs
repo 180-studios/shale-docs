@@ -52,12 +52,12 @@ export default defineConfig({
 					items: [
 						{ label: 'Managing Users', slug: 'access/managing-users' },
 					],
+				},
 				{
 					label: 'Artist Workflow',
 					items: [
 						{ label: 'Capturing Environment', slug: 'artist/capturing' },
 					],
-				},
 				},
 			],
 		}),
