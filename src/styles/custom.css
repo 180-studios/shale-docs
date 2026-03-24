@@ -130,8 +130,10 @@ pre {
 /* ─── Hero image ─── */
 .hero img {
   object-fit: contain !important;
-  max-height: 280px;
-  width: auto;
+  max-height: 240px;
+  max-width: 240px;
+  width: 100%;
+  height: auto;
 }
 
 /* ─── Search ─── */
