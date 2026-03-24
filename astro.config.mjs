@@ -9,6 +9,11 @@ export default defineConfig({
 		starlight({
 			title: 'Shale Docs',
 			favicon: '/favicon.png',
+			logo: {
+				light: './public/images/shaleprimarylogo-color.png',
+				dark: './public/images/ShalePrimaryLogo-Color-DarkMode.png',
+				replacesTitle: true,
+			},
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/180-studios/Shale-Docs' }],
 			customCss: ['./src/styles/custom.css'],
 			head: [

@@ -110,10 +110,11 @@ nav.sidebar a:hover {
   box-shadow: 0 8px 24px rgba(239, 71, 35, 0.35);
 }
 
-/* ─── Hero image ─── */
+/* ─── Hero ─── */
 .hero {
   overflow: visible !important;
   align-items: center !important;
+  padding-top: 2rem !important;
 }
 .hero > img {
   max-width: 300px !important;
