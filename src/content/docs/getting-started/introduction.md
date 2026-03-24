@@ -31,3 +31,5 @@ Speeding up creative cycles by getting notes, feedback and annotations getting d
 ## Platforms
 
 Shale runs on **Web**, **Desktop**, and is optimized for **iPad and tablets**.
+
+![ScreenShot Example](/images/environment.jpgg)
