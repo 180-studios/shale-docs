@@ -32,7 +32,11 @@ Speeding up creative cycles by getting notes, feedback and annotations getting d
 
 Shale runs on **Web**, **Desktop**, and is optimized for **iPad and tablets**.
 
+## **Image Example**
+
 ![ScreenShot Example](/images/environment.jpg)
+
+## **Video Example**
 
 <iframe
   width="100%"
