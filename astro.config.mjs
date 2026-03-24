@@ -2,17 +2,20 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 
-const isProd = process.env.NODE_ENV === 'production';
-
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://180-studios.github.io',
-	base: isProd ? '/Shale-Docs' : '/',
+	site: 'https://shale-docs.netlify.app',
 	integrations: [
 		starlight({
 			title: 'Shale Docs',
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/180-studios/Shale-Docs' }],
 			customCss: ['./src/styles/custom.css'],
+			head: [
+				{
+					tag: 'script',
+					attrs: { src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' },
+				},
+			],
 			sidebar: [
 				{
 					label: 'Getting Started',

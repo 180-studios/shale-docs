@@ -3,7 +3,9 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "astro dev",
+    "dev": "run-p dev:astro dev:cms",
+    "dev:astro": "astro dev",
+    "dev:cms": "decap-server",
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
