@@ -1,14 +1,15 @@
 /* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;500;600&display=swap');
 
-/* ─── Starlight dark-theme token overrides ─── */
-:root[data-theme='dark'],
+/* ─── Accent color for both themes ─── */
 :root {
-  /* Colors */
   --sl-color-accent-low:    #4a1200;
   --sl-color-accent:        #ef4723;
   --sl-color-accent-high:   #ff7a55;
+}
 
+/* ─── Starlight dark-theme token overrides ─── */
+:root[data-theme='dark'] {
   --sl-color-white:         #f5f5f5;
   --sl-color-gray-1:        #e9e9e9;
   --sl-color-gray-2:        #aaa;
@@ -129,6 +130,8 @@ pre {
 /* ─── Hero image ─── */
 .hero img {
   object-fit: contain !important;
+  max-height: 280px;
+  width: auto;
 }
 
 /* ─── Search ─── */
