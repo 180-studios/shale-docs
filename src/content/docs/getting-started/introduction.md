@@ -1,5 +1,5 @@
 ---
-title: Introduction
+title: Introduction Home
 description: What Shale is and how it fits into your 3D workflow.
 ---
 
