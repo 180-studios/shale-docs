@@ -8,6 +8,7 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			title: 'Shale Docs',
+			favicon: { href: '/images/shalesymbol-color.png', type: 'image/png' },
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/180-studios/Shale-Docs' }],
 			customCss: ['./src/styles/custom.css'],
 			head: [
