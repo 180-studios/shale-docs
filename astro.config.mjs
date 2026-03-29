@@ -1,16 +1,14 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
-import rehypeMermaid from 'rehype-mermaid';
+import mermaid from 'astro-mermaid';
 
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://180-studios.github.io',
 	base: '/shale-docs',
-	markdown: {
-		rehypePlugins: [[rehypeMermaid, { strategy: 'inline-svg' }]],
-	},
 	integrations: [
+		mermaid(),
 		starlight({
 			title: 'Shale Docs',
 			favicon: '/favicon.png',
