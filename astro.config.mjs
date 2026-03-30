@@ -21,7 +21,15 @@ export default defineConfig({
 			customCss: ['./src/styles/custom.css'],
 			sidebar: [
 				{ label: 'Getting Started', autogenerate: { directory: 'getting-started' } },
-				{ label: 'Creator', autogenerate: { directory: 'Creator' } },
+				{
+					label: 'Creator',
+					items: [
+						{ label: 'Installing Plugin', slug: 'creator/installing-plugin' },
+						{ label: 'Logging In', slug: 'creator/logging-in' },
+						{ label: 'Linking A Project', slug: 'creator/linking-a-project' },
+						{ label: 'Rendering a Review Region', autogenerate: { directory: 'Creator/Rendering a Review Region' } },
+					],
+				},
 				{ label: 'Reviewer', autogenerate: { directory: 'Reviewer' } },
 				{ label: 'Annotation', autogenerate: { directory: 'annotation' } },
 				{ label: 'Integrations', autogenerate: { directory: 'integrations' } },
