@@ -131,12 +131,10 @@ nav.sidebar a:hover {
 }
 
 #sl-sidebar-toggle-btn {
-  left: 0;
   border-radius: 0 4px 4px 0;
 }
 
 #sl-right-sidebar-toggle-btn {
-  right: 0;
   border-radius: 4px 0 0 4px;
 }
 

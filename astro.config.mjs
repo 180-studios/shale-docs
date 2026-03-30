@@ -26,6 +26,7 @@ export default defineConfig({
 				{ label: 'Getting Started', autogenerate: { directory: 'getting-started' } },
 				{
 					label: 'Creator',
+					collapsed: true,
 					items: [
 						{ label: 'Creator Quick Start Guide', link: 'creator/creator-quick-start' },
 						{ label: 'Creating', autogenerate: { directory: 'Creator/01 Creating' } },
@@ -35,6 +36,7 @@ export default defineConfig({
 				},
 				{
 					label: 'Reviewer',
+					collapsed: true,
 					items: [
 						{ label: 'Reviewing', autogenerate: { directory: 'Reviewer/01 Reviewing' } },
 						{ label: 'Action', autogenerate: { directory: 'Reviewer/02 Review' } },
@@ -42,6 +44,7 @@ export default defineConfig({
 					],
 				},
 				{ label: 'Tips and Tricks', link: 'tips-and-tricks' },
+				{ label: 'Integrations', link: 'integrations/overview' },
 			],
 		}),
 	],

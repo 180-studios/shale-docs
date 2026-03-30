@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var leftSidebar = document.querySelector('.sidebar-pane');
   var rightSidebarContainer = document.querySelector('.right-sidebar-container');
   var rightSidebarPanel = document.querySelector('.right-sidebar');
+  var rightSidebarInner = document.querySelector('.right-sidebar-panel');
   var mainFrame = document.querySelector('.main-frame');
   var mainPane = document.querySelector('.main-pane');
   var contentContainers = document.querySelectorAll('.main-pane .sl-container');
@@ -27,12 +28,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function positionButtons() {
     if (leftSidebar) {
-      leftBtn.style.left = (leftCollapsed ? 0 : leftSidebar.getBoundingClientRect().right) + 'px';
+      var leftEdge = leftCollapsed ? 0 : leftSidebar.getBoundingClientRect().right;
+      leftBtn.style.left = leftEdge + 'px';
     }
     if (rightSidebarContainer) {
-      rightBtn.style.left = (rightCollapsed
-        ? window.innerWidth - rightBtn.offsetWidth
-        : rightSidebarContainer.getBoundingClientRect().left - rightBtn.offsetWidth) + 'px';
+      var rightEdge = rightCollapsed ? 0 : window.innerWidth - rightSidebarInner.getBoundingClientRect().left;
+      rightBtn.style.right = rightEdge + 'px';
     }
   }
 
@@ -87,8 +88,6 @@ document.addEventListener('DOMContentLoaded', function () {
     applyLayout();
     positionButtons();
   });
-
-  window.addEventListener('resize', positionButtons);
 
   applyLeft();
   applyRight();
