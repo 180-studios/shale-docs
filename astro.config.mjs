@@ -10,6 +10,9 @@ export default defineConfig({
 	integrations: [
 		mermaid(),
 		starlight({
+			head: [
+				{ tag: 'script', attrs: { src: '/shale-docs/sidebar-toggle.js', defer: true } },
+			],
 			title: 'Shale Docs',
 			favicon: '/favicon.png',
 			logo: {
@@ -24,16 +27,21 @@ export default defineConfig({
 				{
 					label: 'Creator',
 					items: [
+						{ label: 'Creator Quick Start Guide', link: 'creator/creator-quick-start' },
 						{ label: 'Creating', autogenerate: { directory: 'Creator/01 Creating' } },
 						{ label: 'Review', autogenerate: { directory: 'Creator/02 Review' } },
 						{ label: 'Action', autogenerate: { directory: 'Creator/03 Action' } },
 					],
 				},
-				{ label: 'Reviewer', autogenerate: { directory: 'Reviewer' } },
-				{ label: 'Annotation', autogenerate: { directory: 'annotation' } },
-				{ label: 'Integrations', autogenerate: { directory: 'integrations' } },
-				{ label: 'Artist Workflow', autogenerate: { directory: 'artist' } },
-				{ label: 'Access & Permissions', autogenerate: { directory: 'access' } },
+				{
+					label: 'Reviewer',
+					items: [
+						{ label: 'Reviewing', autogenerate: { directory: 'Reviewer/01 Reviewing' } },
+						{ label: 'Action', autogenerate: { directory: 'Reviewer/02 Review' } },
+						{ label: 'Action', autogenerate: { directory: 'Reviewer/03 Action' } },
+					],
+				},
+				{ label: 'Tips and Tricks', link: 'tips-and-tricks' },
 			],
 		}),
 	],

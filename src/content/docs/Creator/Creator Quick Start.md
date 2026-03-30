@@ -1,0 +1,15 @@
+---
+title: Creator Quick Start
+description: Sketch-style feedback tools for annotating 3D environments.
+sidebar:
+    order: 1
+---
+
+These steps assume you've already signed up and created an organiztion
+<div class="checklist-item"><input type="checkbox" /> Install Plugin</div>
+<div class="checklist-item"><input type="checkbox" /> Login To Plugin inside DCC</div>
+<div class="checklist-item"><input type="checkbox" /> Create Awesome Content</div>
+<div class="checklist-item"><input type="checkbox" /> Decide What Needs Reviewing</div>
+<div class="checklist-item"><input type="checkbox" /> Use Spline or Grid tool To mark Area For Review</div>
+<div class="checklist-item"><input type="checkbox" /> Render Review Area</div>
+<div class="checklist-item"><input type="checkbox" /> View Rendered Result In Shale Portal!</div>
