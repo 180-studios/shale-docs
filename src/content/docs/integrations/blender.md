@@ -1,6 +1,8 @@
 ---
 title: Blender
 description: Using Shale with Blender.
+sidebar:   
+    order: 2
 ---
 
 The Shale add-on for Blender integrates the review pipeline directly into your modeling and rendering workflow.

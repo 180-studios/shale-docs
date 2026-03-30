@@ -24,12 +24,9 @@ export default defineConfig({
 				{
 					label: 'Creator',
 					items: [
-						{ label: 'Installing Plugin', slug: 'creator/installing-plugin' },
-						{ label: 'Logging In', slug: 'creator/logging-in' },
-						{ label: 'Linking A Project', slug: 'creator/linking-a-project' },
-						{ label: 'Rendering a Review Region', autogenerate: { directory: 'Creator/Rendering a Review Region' } },
-						{ label: 'Review', autogenerate: { directory: 'Creator/Review' } },
-						{ label: 'Action', autogenerate: { directory: 'Creator/Review' } },
+						{ label: 'Creating', autogenerate: { directory: 'Creator/01 Creating' } },
+						{ label: 'Review', autogenerate: { directory: 'Creator/02 Review' } },
+						{ label: 'Action', autogenerate: { directory: 'Creator/03 Action' } },
 					],
 				},
 				{ label: 'Reviewer', autogenerate: { directory: 'Reviewer' } },
