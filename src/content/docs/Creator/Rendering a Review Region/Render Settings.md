@@ -1,6 +1,6 @@
 ---
-title: Installing Plugin
+title: Render Settings
 description: Sketch-style feedback tools for annotating 3D environments.
 sidebar:
-    order: 1
+    order: 3
 ---
