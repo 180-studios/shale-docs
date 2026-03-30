@@ -28,6 +28,8 @@ export default defineConfig({
 						{ label: 'Logging In', slug: 'creator/logging-in' },
 						{ label: 'Linking A Project', slug: 'creator/linking-a-project' },
 						{ label: 'Rendering a Review Region', autogenerate: { directory: 'Creator/Rendering a Review Region' } },
+						{ label: 'Review', autogenerate: { directory: 'Creator/Review' } },
+						{ label: 'Action', autogenerate: { directory: 'Creator/Review' } },
 					],
 				},
 				{ label: 'Reviewer', autogenerate: { directory: 'Reviewer' } },
