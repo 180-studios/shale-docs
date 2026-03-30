@@ -20,42 +20,13 @@ export default defineConfig({
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/180-studios/Shale-Docs' }],
 			customCss: ['./src/styles/custom.css'],
 			sidebar: [
-				{
-					label: 'Getting Started',
-					items: [
-						{ label: 'Introduction', slug: 'getting-started/introduction' },
-						{ label: 'Quick Start', slug: 'getting-started/quick-start' },
-					],
-				},
-				{
-					label: 'Annotation',
-					items: [
-						{ label: 'Brush Engine', slug: 'annotation/brush-engine' },
-						{ label: 'Comments & Notes', slug: 'annotation/comments' },
-					],
-				},
-				{
-					label: 'Integrations',
-					items: [
-						{ label: 'Overview', slug: 'integrations/overview' },
-						{ label: 'Unreal Engine', slug: 'integrations/unreal-engine' },
-						{ label: 'Blender', slug: 'integrations/blender' },
-						{ label: 'SketchUp', slug: 'integrations/sketchup' },
-						{ label: 'Maya', slug: 'integrations/maya' },
-					],
-				},
-				{
-					label: 'Access & Permissions',
-					items: [
-						{ label: 'Managing Users', slug: 'access/managing-users' },
-					],
-				},
-				{
-					label: 'Artist Workflow',
-					items: [
-						{ label: 'Capturing Environment', slug: 'artist/capturing' },
-					],
-				},
+				{ label: 'Getting Started', autogenerate: { directory: 'getting-started' } },
+				{ label: 'Creator', autogenerate: { directory: 'Creator' } },
+				{ label: 'Reviewer', autogenerate: { directory: 'Reviewer' } },
+				{ label: 'Annotation', autogenerate: { directory: 'annotation' } },
+				{ label: 'Integrations', autogenerate: { directory: 'integrations' } },
+				{ label: 'Artist Workflow', autogenerate: { directory: 'artist' } },
+				{ label: 'Access & Permissions', autogenerate: { directory: 'access' } },
 			],
 		}),
 	],
