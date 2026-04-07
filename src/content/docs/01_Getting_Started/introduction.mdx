@@ -2,13 +2,18 @@
 title: Introduction
 description: What Shale is and how it fits into your 3D workflow.
 ---
+
+import { Aside } from '@astrojs/starlight/components';
+
+<Aside type="caution">This page is a work in progress.</Aside>
+
 Shale is a review and approval platform built for 2D and 3D content — enabling stakeholders to give feedback directly in 3D without needing to learn complex tools, and getting that feedback back into the hands of artists in real-time.
 
 Designed for teams across game design, architecture, VFX, interior design and architecture.
 
 ## Who is Shale for?
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
+import { Card, CardGrid, LinkButton } from '@astrojs/starlight/components';
 
 
 <CardGrid>
@@ -29,35 +34,54 @@ import { Card, CardGrid } from '@astrojs/starlight/components';
   </Card>
 </CardGrid>
 
-
+<br /> <br />
 ## First Steps
 
+<br />
+<div style="display: flex; gap: 1rem; justify-content: center;">
+  <LinkButton href="/02_creator/creator-quick-start" icon="right-arrow">Creator Quick Start</LinkButton>
+  <LinkButton href="/03_reviewer/reviewer-quick-start" icon="right-arrow">Reviewer Quick Start</LinkButton>
+</div>
+<br />
+
+1. Create a project and add your team members
+
+**Via Browser Upload**
+2. Upload images, models, or renders directly from your browser
+3. Share a review link with your reviewers
+
+**Via Plugin Upload**
+2. Open your DCC with the Shale plugin installed
+3. Mark the asset or area you want reviewed and export to your Shale project
+
+**From here, both paths converge:**
+4. Reviewers annotate directly in the browser using the brush engine and comment tools
+5. Feedback flows back to you as embedded comment threads with approval states
+6. Iterate, resolve, and track through to final sign-off
+
+<br /> <br /> 
+## Basic Process
 ```mermaid
-flowchart TD
+%%{init: {'flowchart': {'curve': 'linear'}, 'themeVariables': {'fontSize': '18px'}}}%%
+flowchart LR
   A(Sign Up For An Account)
   A --> B(Create Organization)
   B --> C(Add Members)
-  C --> D(👉 I Am A Creator) & E(👉 I Am A Reviewer)
-  E --> F(Upload Art) & G(Open DCC To Upload)
+  C --> D("<b>👉 I Am A Creator</b>") & E("<b>👉 I Am A Reviewer</b>")
+  D --> F(Browser Upload) & G(Plugin Upload)
+  E ----> H(Review Content!)
+  F & G --> I(Share with Reviewer)
+  I --> H
+  H --> D
 
-  click D href "/shale-docs/creator/creator-quick-start" "Creator Quick Start"
-  click E href "/shale-docs/reviewer" "Reviewer Docs"
+  click D href "/02_creator/creator-quick-start" "Creator Quick Start"
+  click E href "/03_reviewer/reviewer-quick-start" "Reviewer Quick Start"
 
-  style D fill:#ef4723,color:#fff,stroke:#ef4723,cursor:pointer
-  style E fill:#ef4723,color:#fff,stroke:#ef4723,cursor:pointer
+  style D fill:#ef4723,color:#fff,stroke:#ef4723,cursor:pointer,font-weight:bold
+  style E fill:#ef4723,color:#fff,stroke:#ef4723,cursor:pointer,font-weight:bold
 ```
 
-
-## Basic Process
-
-1. Create A Project
-2. Create your content in your DCC or upload existing images, content or models 
-2. If in your DCC, Mark the area you want reviewed and export to the Shale App
-3. Send reviewers a link to your Shale project on the app, or choose a project and asset to open and review
-4. Reviewers annotate directly on a representation of the 3D environment using the brush engine and comment tools
-5. Feedback flows back into your DCC as embedded comment threads with approval states
-6. Iterate, resolve, and track the full chain of custody through to final sign-off
-
+<br />
 ## Platforms
 For reviewers - Shale runs in a browser on any device, is multi touch and stylus enabled on tablets!2
 For creators - Shale is currently supports:
@@ -67,3 +91,5 @@ For creators - Shale is currently supports:
   - Blender Direct Render Upload
 - 2D Images (PNG/JPG/EXR)
 - 360 Images from cameras such as Insta360
+
+

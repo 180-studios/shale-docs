@@ -10,7 +10,7 @@ export default defineConfig({
 		mermaid(),
 		starlight({
 			head: [
-				{ tag: 'script', attrs: { src: '/shale-docs/sidebar-toggle.js', defer: true } },
+				{ tag: 'script', attrs: { src: '/sidebar-toggle.js', defer: true } },
 			],
 			title: 'Shale Docs',
 			favicon: '/favicon.png',
@@ -23,29 +23,29 @@ export default defineConfig({
 			customCss: ['./src/styles/custom.css'],
 			sidebar: [
 				{ label: 'Getting Started', autogenerate: { directory: '01_Getting_Started' } },
+				{ label: 'Web Portal', autogenerate: { directory: 'web-portal' } },
 				{
 					label: 'Creator',
 					collapsed: true,
 					items: [
-						{ label: 'Creator Quick Start Guide', link: '02_creator/creator-quick-start' },
-						{ label: 'Creating', autogenerate: { directory: '02_Creator/01_Creating' } },
-						{ label: 'Review', autogenerate: { directory: '02_Creator/02_Review' } },
-						{ label: 'Action', autogenerate: { directory: '02_Creator/03_Action' } },
+						{ label: 'Creator Quick Start', link: '02_creator/creator-quick-start' },
+						{ label: 'Browser Upload', autogenerate: { directory: '02_Creator/01_Browser_Upload' } },
+						{ label: 'Plugin Upload', autogenerate: { directory: '02_Creator/02_Plugin_Upload' } },
+						{ label: 'Reviewing Feedback', autogenerate: { directory: '02_Creator/03_Reviewing_Feedback' } },
 					],
 				},
 				{
 					label: 'Reviewer',
 					collapsed: true,
 					items: [
-						{ label: 'Creating', autogenerate: { directory: '03_Reviewer/01_Creating' } },
+						{ label: 'Reviewer Quick Start', link: '03_reviewer/reviewer-quick-start' },
 						{
 							label: 'Reviewing',
 							collapsed: true,
 							items: [
-								{ label: 'Navigation', link: '03_reviewer/02_review/navigation' },
 								{ label: 'Highlighting', link: '03_reviewer/02_review/highlighting' },
 								{ label: 'Brush Engine', link: '03_reviewer/02_review/brush-engine' },
-								{ label: 'Notes/Commenting', link: '03_reviewer/02_review/notes-commenting' },
+								{ label: 'Comments', link: '03_reviewer/02_review/comments' },
 								{ label: 'Replying', link: '03_reviewer/02_review/replying' },
 								{ label: 'Camera Controls', link: '03_reviewer/02_review/camera-controls' },
 								{ label: 'Color', link: '03_reviewer/02_review/color' },
@@ -53,9 +53,9 @@ export default defineConfig({
 								{ label: '3D Assets', autogenerate: { directory: '03_Reviewer/02_Review/3D_assets' } },
 							],
 						},
-						{ label: 'Action', autogenerate: { directory: '03_Reviewer/03_Action' } },
 					],
 				},
+				{ label: 'Administration', autogenerate: { directory: 'administration' } },
 				{ label: 'Tips and Tricks', autogenerate: { directory: '04_tips-and-tricks' } },
 				{ label: 'Integrations', autogenerate: { directory: '05_integrations' } },
 			],

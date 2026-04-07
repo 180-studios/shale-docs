@@ -1,19 +1,42 @@
 ---
 title: Creator Quick Start
-description: Sketch-style feedback tools for annotating 3D environments.
+description: Get your first review session up and running.
 sidebar:
     order: 1
 ---
 
-import { Aside } from '@astrojs/starlight/components';
+import { Aside, Card, CardGrid } from '@astrojs/starlight/components';
 
-<Aside>These steps assume you've already signed up and created an organiztion.</Aside>
+<Aside>These steps assume you've already signed up and created an organization.</Aside>
 
+Choose your upload path:
 
-<div class="checklist-item"><input type="checkbox" /> Install Plugin</div>
-<div class="checklist-item"><input type="checkbox" /> Login To Plugin inside DCC</div>
-<div class="checklist-item"><input type="checkbox" /> Create Awesome Content</div>
-<div class="checklist-item"><input type="checkbox" /> Decide What Needs Reviewing</div>
-<div class="checklist-item"><input type="checkbox" /> Use Spline or Grid tool To mark Area For Review</div>
-<div class="checklist-item"><input type="checkbox" /> Render Review Area</div>
-<div class="checklist-item"><input type="checkbox" /> View Rendered Result In Shale Portal!</div>
+<CardGrid>
+  <Card title="Browser Upload" icon="upload">
+    Upload images, models, or renders directly from the Shale web portal — no plugin required.
+  </Card>
+  <Card title="Plugin Upload" icon="puzzle">
+    Export directly from your DCC using the Shale plugin for Blender or other supported tools.
+  </Card>
+</CardGrid>
+
+## Via Browser Upload
+
+<div class="checklist-item"><input type="checkbox" /> Go to the Shale web portal</div>
+<div class="checklist-item"><input type="checkbox" /> Create a new project</div>
+<div class="checklist-item"><input type="checkbox" /> Upload your images, models, or renders</div>
+<div class="checklist-item"><input type="checkbox" /> Share the project link with your reviewers</div>
+
+## Via Plugin Upload
+
+<div class="checklist-item"><input type="checkbox" /> Install the Shale plugin in your DCC</div>
+<div class="checklist-item"><input type="checkbox" /> Log in to the plugin</div>
+<div class="checklist-item"><input type="checkbox" /> Create or link a project</div>
+<div class="checklist-item"><input type="checkbox" /> Mark the area or asset you want reviewed</div>
+<div class="checklist-item"><input type="checkbox" /> Export to Shale</div>
+
+## Then, for both paths
+
+<div class="checklist-item"><input type="checkbox" /> Check feedback from reviewers in your project</div>
+<div class="checklist-item"><input type="checkbox" /> Reply to notes and resolve feedback</div>
+<div class="checklist-item"><input type="checkbox" /> Re-export or upload a new version when ready</div>
