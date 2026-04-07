@@ -161,6 +161,16 @@ nav.sidebar a:hover {
   accent-color: #ef4723;
 }
 
+/* ─── Sidebar group labels ─── */
+.group-label {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--sl-color-accent-high);
+}
+
 /* ─── Hero ─── */
 .hero {
   overflow: visible !important;
