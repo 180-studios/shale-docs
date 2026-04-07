@@ -5,8 +5,7 @@ import mermaid from 'astro-mermaid';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://180-studios.github.io',
-	base: '/shale-docs',
+	site: 'https://docs.shalereview.com',
 	integrations: [
 		mermaid(),
 		starlight({
