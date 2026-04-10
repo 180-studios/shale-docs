@@ -110,9 +110,8 @@ nav.sidebar a:hover {
   box-shadow: 0 8px 24px rgba(239, 71, 35, 0.35);
 }
 
-/* ─── Sidebar toggle buttons ─── */
-#sl-sidebar-toggle-btn,
-#sl-right-sidebar-toggle-btn {
+/* ─── Sidebar toggle button ─── */
+#sl-sidebar-toggle-btn {
   position: fixed;
   top: 80px;
   z-index: 9999;
@@ -121,7 +120,7 @@ nav.sidebar a:hover {
   background: var(--sl-color-bg);
   color: var(--sl-color-text);
   border: 1px solid var(--sl-color-hairline);
-  border-radius: 4px;
+  border-radius: 0 4px 4px 0;
   cursor: pointer;
   font-size: 26px;
   display: none;
@@ -130,19 +129,37 @@ nav.sidebar a:hover {
   padding: 0;
 }
 
-#sl-sidebar-toggle-btn {
-  border-radius: 0 4px 4px 0;
-}
-
-#sl-right-sidebar-toggle-btn {
-  border-radius: 4px 0 0 4px;
-}
-
 @media (min-width: 50rem) {
-  #sl-sidebar-toggle-btn,
-  #sl-right-sidebar-toggle-btn {
+  #sl-sidebar-toggle-btn {
     display: flex;
   }
+}
+
+/* ─── Lightbox ─── */
+.sl-markdown-content img {
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.sl-markdown-content img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 0 3px #ef4723;
+}
+#sl-lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: zoom-out;
+}
+#sl-lightbox-overlay img {
+  max-width: 95vw;
+  max-height: 95vh;
+  object-fit: contain;
+  border-radius: 4px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6);
 }
 
 /* ─── Checklist ─── */

@@ -9,8 +9,10 @@ export default defineConfig({
 	integrations: [
 		mermaid(),
 		starlight({
+			tableOfContents: false,
 			head: [
 				{ tag: 'script', attrs: { src: '/sidebar-toggle.js', defer: true } },
+				{ tag: 'script', attrs: { src: '/lightbox.js', defer: true } },
 			],
 			title: 'Shale Docs',
 			favicon: '/favicon.png',

@@ -1,12 +1,10 @@
 document.addEventListener('DOMContentLoaded', function () {
   var leftSidebar = document.querySelector('.sidebar-pane');
-  var rightSidebarContainer = document.querySelector('.right-sidebar-container');
-  var rightSidebarPanel = document.querySelector('.right-sidebar');
   var mainFrame = document.querySelector('.main-frame');
   var mainPane = document.querySelector('.main-pane');
   var contentContainers = document.querySelectorAll('.main-pane .sl-container');
 
-  if (!leftSidebar && !rightSidebarContainer) return;
+  if (!leftSidebar) return;
 
   // Left toggle button
   var leftBtn = document.createElement('button');
@@ -15,32 +13,18 @@ document.addEventListener('DOMContentLoaded', function () {
   leftBtn.textContent = '<';
   document.body.appendChild(leftBtn);
 
-  // Right toggle button
-  var rightBtn = document.createElement('button');
-  rightBtn.id = 'sl-right-sidebar-toggle-btn';
-  rightBtn.title = 'Toggle table of contents';
-  rightBtn.textContent = '>';
-  document.body.appendChild(rightBtn);
-
   var leftCollapsed = sessionStorage.getItem('sidebarCollapsed') === 'true';
-  var rightCollapsed = sessionStorage.getItem('rightSidebarCollapsed') === 'true';
 
   function positionButtons() {
     if (leftSidebar) {
       leftBtn.style.left = (leftCollapsed ? 0 : leftSidebar.getBoundingClientRect().right) + 'px';
     }
-    if (rightSidebarContainer) {
-      rightBtn.style.left = (rightCollapsed
-        ? window.innerWidth - rightBtn.offsetWidth
-        : rightSidebarContainer.getBoundingClientRect().left - rightBtn.offsetWidth) + 'px';
-    }
   }
 
   function applyLayout() {
-    var anyCollapsed = leftCollapsed || rightCollapsed;
-    if (mainPane) mainPane.style.flex = rightCollapsed ? '1' : '';
+    if (mainPane) mainPane.style.flex = '';
     contentContainers.forEach(function (el) {
-      el.style.maxWidth = anyCollapsed ? 'none' : '';
+      el.style.maxWidth = leftCollapsed ? 'none' : '';
     });
   }
 
@@ -59,19 +43,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  function applyRight() {
-    if (!rightSidebarContainer || !rightSidebarPanel) return;
-    if (rightCollapsed) {
-      rightSidebarContainer.style.width = '0px';
-      rightSidebarPanel.style.display = 'none';
-      rightBtn.textContent = '<';
-    } else {
-      rightSidebarContainer.style.width = '';
-      rightSidebarPanel.style.display = '';
-      rightBtn.textContent = '>';
-    }
-  }
-
   leftBtn.addEventListener('click', function () {
     leftCollapsed = !leftCollapsed;
     sessionStorage.setItem('sidebarCollapsed', String(leftCollapsed));
@@ -80,18 +51,9 @@ document.addEventListener('DOMContentLoaded', function () {
     positionButtons();
   });
 
-  rightBtn.addEventListener('click', function () {
-    rightCollapsed = !rightCollapsed;
-    sessionStorage.setItem('rightSidebarCollapsed', String(rightCollapsed));
-    applyRight();
-    applyLayout();
-    positionButtons();
-  });
-
   window.addEventListener('resize', positionButtons);
 
   applyLeft();
-  applyRight();
   applyLayout();
   positionButtons();
 });

@@ -44,8 +44,5 @@ export default new Map([
 ["src/content/docs/guides/examples.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fdocs%2Fguides%2Fexamples.mdx&astroContentModuleFlag=true")],
 ["src/content/docs/guides/mermaid-charts.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fdocs%2Fguides%2Fmermaid-charts.mdx&astroContentModuleFlag=true")],
 ["src/content/docs/index.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fdocs%2Findex.mdx&astroContentModuleFlag=true")],
-["src/content/docs/web-portal/dashboard.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fdocs%2Fweb-portal%2Fdashboard.mdx&astroContentModuleFlag=true")],
-["src/content/docs/web-portal/login.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fdocs%2Fweb-portal%2Flogin.mdx&astroContentModuleFlag=true")],
-["src/content/docs/web-portal/notes-page.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fdocs%2Fweb-portal%2Fnotes-page.mdx&astroContentModuleFlag=true")],
-["src/content/docs/web-portal/projects-page.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fdocs%2Fweb-portal%2Fprojects-page.mdx&astroContentModuleFlag=true")]]);
+["src/content/docs/web-portal/overview.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fdocs%2Fweb-portal%2Foverview.mdx&astroContentModuleFlag=true")]]);
 		
