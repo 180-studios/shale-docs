@@ -47,14 +47,17 @@ import { Card, CardGrid, LinkButton } from '@astrojs/starlight/components';
 1. Create a project and add your team members
 
 **Via Browser Upload**
+
 2. Upload images, models, or renders directly from your browser
 3. Share a review link with your reviewers
 
 **Via Plugin Upload**
+
 2. Open your DCC with the Shale plugin installed
 3. Mark the asset or area you want reviewed and export to your Shale project
 
 **From here, both paths converge:**
+
 4. Reviewers annotate directly in the browser using the brush engine and comment tools
 5. Feedback flows back to you as embedded comment threads with approval states
 6. Iterate, resolve, and track through to final sign-off
@@ -63,7 +66,7 @@ import { Card, CardGrid, LinkButton } from '@astrojs/starlight/components';
 ## Basic Process
 ```mermaid
 %%{init: {'flowchart': {'curve': 'linear'}, 'themeVariables': {'fontSize': '18px'}}}%%
-flowchart LR
+flowchart TD
   A(Sign Up For An Account)
   A --> B(Create Organization)
   B --> C(Add Members)
@@ -73,6 +76,7 @@ flowchart LR
   F & G --> I(Share with Reviewer)
   I --> H
   H --> D
+  H --> J(Approval!)
 
   click D href "/02_creator/creator-quick-start" "Creator Quick Start"
   click E href "/03_reviewer/reviewer-quick-start" "Reviewer Quick Start"
