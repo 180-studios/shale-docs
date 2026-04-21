@@ -41,8 +41,9 @@ import { Card, CardGrid, LinkButton } from '@astrojs/starlight/components';
 
 <br />
 <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-  <LinkButton href="/02_creator/creator-quick-start" icon="right-arrow">Creator Quick Start</LinkButton>
-  <LinkButton href="/03_reviewer/reviewer-quick-start" icon="right-arrow">Reviewer Quick Start</LinkButton>
+  <LinkButton href="/02_browser_upload/overview" icon="right-arrow">Upload via Browser</LinkButton>
+  <LinkButton href="/03_plugin_upload/overview" icon="right-arrow">Upload via Plugin</LinkButton>
+  <LinkButton href="/04_review/overview" icon="right-arrow">Review & Comment</LinkButton>
   <LinkButton href="/01_getting_started/video-tutorials-quick-start" icon="right-arrow" variant="secondary">Video Tutorials</LinkButton>
 </div>
 <br />
@@ -73,18 +74,19 @@ flowchart TD
   A(Sign Up For An Account)
   A --> B(Create Organization)
   B --> C(Add Members)
-  C --> D("<b>👉 I Am A Creator</b>") & E("<b>👉 I Am A Reviewer</b>")
-  D --> F(Browser Upload) & G(Plugin Upload)
-  E ----> H(Review Content!)
-  F & G --> I(Share with Reviewer)
-  I --> H
-  H --> D
-  H --> J(Approval!)
+  C --> D("<b>👉 Upload via Browser</b>") & G("<b>👉 Upload via Plugin</b>")
+  C --> E("<b>👉 Review & Comment</b>")
+  D --> I(Share with Team)
+  G --> I
+  I --> E
+  E --> J(Approval!)
 
-  click D href "/02_creator/creator-quick-start" "Creator Quick Start"
-  click E href "/03_reviewer/reviewer-quick-start" "Reviewer Quick Start"
+  click D href "/02_browser_upload/overview" "Upload via Browser"
+  click G href "/03_plugin_upload/overview" "Upload via Plugin"
+  click E href "/04_review/overview" "Review & Comment"
 
   style D fill:#ef4723,color:#fff,stroke:#ef4723,cursor:pointer,font-weight:bold
+  style G fill:#ef4723,color:#fff,stroke:#ef4723,cursor:pointer,font-weight:bold
   style E fill:#ef4723,color:#fff,stroke:#ef4723,cursor:pointer,font-weight:bold
 ```
 
