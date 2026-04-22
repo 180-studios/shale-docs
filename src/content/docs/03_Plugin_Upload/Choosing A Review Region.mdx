@@ -1,12 +1,21 @@
 ---
 title: Choosing a Review Region
-description: Sketch-style feedback tools for annotating 3D environments.
+description: How to define the area of your scene to capture for review.
 sidebar:
     order: 4
 ---
 
-import { Aside } from '@astrojs/starlight/components';
+A **review region** defines the area of your scene that Shale will capture. It determines where capture nodes are placed — each node is a position a reviewer can jump to and look around from.
 
-<Aside type="caution">This page is a work in progress.</Aside>
+## Grid vs Spline
 
-hi!
+Shale offers two tools for defining a capture region:
+
+- **Grid** — places capture nodes in a 3D volumetric cage. Good for covering a defined area or room uniformly, where reviewers should be able to stand anywhere within the space.
+- **Spline** — places capture nodes along a path. Good for corridors, walkways, or any space where you want to guide the reviewer along a specific route.
+
+Both tools work in full 3D — X, Y, and Z — so they can cover multi-level spaces and environments with vertical complexity.
+
+Go to the **Capture** tab in the Shale panel and click **Add Grid** or **Add Spline** to place a region in your scene.
+
+See the [Grid Tool](./grid-tool) and [Spline Tool](./spline-tool) pages for detailed settings.

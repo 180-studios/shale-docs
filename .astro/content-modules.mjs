@@ -1,8 +1,10 @@
 
 export default new Map([
+["src/content/docs/01_Getting_Started/introduction copy.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fdocs%2F01_Getting_Started%2Fintroduction+copy.mdx&astroContentModuleFlag=true")],
 ["src/content/docs/01_Getting_Started/introduction.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fdocs%2F01_Getting_Started%2Fintroduction.mdx&astroContentModuleFlag=true")],
 ["src/content/docs/01_Getting_Started/Keyboard and UI Shortcuts.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fdocs%2F01_Getting_Started%2FKeyboard+and+UI+Shortcuts.mdx&astroContentModuleFlag=true")],
 ["src/content/docs/01_Getting_Started/Video Tutorials Quick Start.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fdocs%2F01_Getting_Started%2FVideo+Tutorials+Quick+Start.mdx&astroContentModuleFlag=true")],
+["src/content/docs/01_Getting_Started/what-is-an-asset.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fdocs%2F01_Getting_Started%2Fwhat-is-an-asset.mdx&astroContentModuleFlag=true")],
 ["src/content/docs/02_Browser_Upload/creating-a-project.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fdocs%2F02_Browser_Upload%2Fcreating-a-project.mdx&astroContentModuleFlag=true")],
 ["src/content/docs/02_Browser_Upload/overview.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fdocs%2F02_Browser_Upload%2Foverview.mdx&astroContentModuleFlag=true")],
 ["src/content/docs/02_Browser_Upload/sharing-for-review.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fdocs%2F02_Browser_Upload%2Fsharing-for-review.mdx&astroContentModuleFlag=true")],

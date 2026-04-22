@@ -1,85 +1,90 @@
 ---
 title: Introduction
-description: What Shale is and how it fits into your 3D workflow.
+description: What Shale is, what an asset is, and how it fits into your 3D workflow.
 sidebar:
     order: 1
 ---
 
-import { Aside } from '@astrojs/starlight/components';
+import { Card, CardGrid, LinkButton, Aside } from '@astrojs/starlight/components';
 
-<Aside type="caution">This page is a work in progress.</Aside>
+Shale is a review and approval platform for creative teams. It lets artists share 2D and 3D work with clients and collaborators through a simple browser link — no software installs, no file transfers, no lost feedback threads. From quick image markups to fully navigable 3D environments, Shale keeps feedback connected to the work it's about.
 
-Shale is a review and approval platform built for 2D and 3D content — enabling stakeholders to give feedback directly in 3D without needing to learn complex tools, and getting that feedback back into the hands of artists in real-time.
+## Why Shale?
 
-Designed for teams across game design, architecture, VFX, interior design and architecture.
+Creative projects generate a lot of content — 3D environments, renders, marketing materials, concept drawings — and getting clear feedback on all of it usually means juggling inboxes, chat threads, and vague screenshots with no clear connection between them. Shale gives you one place to get feedback on all of your project's assets. A 3D capture, a render, a concept drawing — all in the same project, all reviewable in a browser, all with notes attached to exactly what they're about.
+
+When you connect directly from a DCC like Blender, that feedback comes back into your scene in real-time. For browser uploads it keeps everything centralised and annotatable — a much cleaner loop than the alternatives.
+
+- **One place** to get feedback on all your project's creative work
+- **Organised and accessible** to the whole team, not buried in someone's inbox
+- **Annotations attached to the work**, so feedback always has context
+- **No software needed** for reviewers — just a link
+
+---
 
 ## Who is Shale for?
 
-import { Card, CardGrid, LinkButton } from '@astrojs/starlight/components';
+- **Game Studios** — review levels, assets, and environments with your team and clients without sending builds.
+- **VFX Teams** — annotate renders and 3D scenes with notes tied to camera position and geometry.
+- **Architects** — walk stakeholders through models and collect structured feedback remotely.
+- **Interior Designers** — share spaces with contractors and clients with a clear way to leave feedback on finishes and materials.
+- **Creative Professionals** — anyone who needs a better feedback loop than email screenshots and Slack threads.
 
+---
 
-<CardGrid>
-  <Card title="Creative Professionals" icon="pencil">
-   Anyone creating, sharing and looking for feedback on shared documents.
-  </Card>
-  <Card title="Game Studios" icon="puzzle">
-    Review levels, assets, and environments with your team and clients.
-  </Card>
-  <Card title="Architects" icon="comment">
-    walk through models and collect structured feedback from stakeholder.
-  </Card>
-  <Card title="VFX Teams" icon="laptop">
-    annotate renders and 3D scenes with context-aware notes tied to camera view.
-  </Card>
-  <Card title="Interior Designers" icon="sun">
-  Interior Design** — share notes on photos with contractors and give clients a great way to see their new decor and leave feedback for contractors.
-  </Card>
-</CardGrid>
+## What is an Asset?
 
-<br /> <br />
-## First Steps
+An **asset** is anything you upload to Shale for review — a 3D environment, a rendered image, a marketing deck, a concept drawing. It's the thing your reviewers open, look at, and leave notes on.
+
+Shale works across two broad categories:
+
+### 2D Assets
+
+For many teams, Shale is simply the best way to get clear, annotated feedback on flat content — without the mess of email chains or scattered Slack messages.
+
+- **Images** (PNG, JPG, EXR) — renders, concept art, screenshots, marketing materials
+- **Drawings & Illustrations** — any visual you need marked up with precision
+- **PDFs** — coming soon
+
+Upload directly from your browser, share a link, and your reviewers annotate exactly where they mean. No 3D knowledge required on either side.
+
+### 3D Assets & Environments
+
+This is where Shale becomes uniquely powerful. Using the Shale plugin in Blender, you define a **capture region** over your scene — a 3D volumetric cage placed using the **Grid** or **Spline** tool. When you export, Shale captures a 360° view at every node in that volume and assembles them into a fully navigable 3D environment.
+
+Reviewers open a link and explore it like Google Maps Street View — jumping between capture nodes, looking in any direction, getting a real sense of the space. No 3D software. No file downloads. No explanation required.
+
+When they leave a comment, it comes back to you in Blender in real-time, placed in 3D — exactly where they meant it. The stakeholder never needed to understand 3D, and you still get every note in full spatial context.
+
+- **3D Environments** — navigable captures from a Grid or Spline capture region
+- **3D Models** (GLB/GLTF) — reviewers orbit, zoom, and annotate directly on geometry
+
+---
+
+## How it fits your process
+
+You don't change how you work — Shale sits at the end of your existing pipeline and replaces the feedback step.
+
+**As a creator**, upload from your browser or push directly from Blender via the plugin. Share a link. That's it.
+
+**As a reviewer**, open a link and leave notes exactly where you mean them — no software, no training.
+
+**As a team**, one source of truth: the same asset, same annotations, same approval state for everyone.
 
 <br />
-<div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-  <LinkButton href="/02_browser_upload/overview" icon="right-arrow">Upload via Browser</LinkButton>
-  <LinkButton href="/03_plugin_upload/overview" icon="right-arrow">Upload via Plugin</LinkButton>
-  <LinkButton href="/04_review/overview" icon="right-arrow">Review & Comment</LinkButton>
-  <LinkButton href="/01_getting_started/video-tutorials-quick-start" icon="right-arrow" variant="secondary">Video Tutorials</LinkButton>
-</div>
-<br />
 
-1. Create a project and add your team members
-
-**Via Browser Upload**
-
-2. Upload images, models, or renders directly from your browser
-3. Share a review link with your reviewers
-
-**Via Plugin Upload**
-
-2. Open your DCC with the Shale plugin installed
-3. Mark the asset or area you want reviewed and export to your Shale project
-
-**From here, both paths converge:**
-
-4. Reviewers annotate directly in the browser using the brush engine and comment tools
-5. Feedback flows back to you as embedded comment threads with approval states
-6. Iterate, resolve, and track through to final sign-off
-
-<br /> <br /> 
-## Basic Process
 ```mermaid
 %%{init: {'flowchart': {'curve': 'linear'}, 'themeVariables': {'fontSize': '18px'}}}%%
 flowchart TD
-  A(Sign Up For An Account)
-  A --> B(Create Organization)
-  B --> C(Add Members)
-  C --> D("<b>👉 Upload via Browser</b>") & G("<b>👉 Upload via Plugin</b>")
-  C --> E("<b>👉 Review & Comment</b>")
-  D --> I(Share with Team)
+  A(Create a Project)
+  A --> B(Add Your Team)
+  B --> C(Upload an Asset)
+  C --> D("<b>👉 Via Browser</b>") & G("<b>👉 Via Plugin</b>")
+  D --> I(Share Review Link)
   G --> I
-  I --> E
-  E --> J(Approval!)
+  I --> E("<b>👉 Review & Comment</b>")
+  E --> J(Resolve & Approve)
+  J --> K(Ship It)
 
   click D href "/02_browser_upload/overview" "Upload via Browser"
   click G href "/03_plugin_upload/overview" "Upload via Plugin"
@@ -91,14 +96,12 @@ flowchart TD
 ```
 
 <br />
-## Platforms
-For reviewers - Shale runs in a browser on any device, is multi touch and stylus enabled on tablets!2
-For creators - Shale is currently supports:
-- Blender Direct Integration
-  - Blender Direct Environment Capture
-  - Blender Direct 3D models Upload
-  - Blender Direct Render Upload
-- 2D Images (PNG/JPG/EXR)
-- 360 Images from cameras such as Insta360
 
+## Get started
 
+<div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+  <LinkButton href="/02_browser_upload/overview" icon="right-arrow">Upload via Browser</LinkButton>
+  <LinkButton href="/03_plugin_upload/overview" icon="right-arrow">Upload via Plugin</LinkButton>
+  <LinkButton href="/04_review/overview" icon="right-arrow">Review & Comment</LinkButton>
+  <LinkButton href="/01_getting_started/video-tutorials-quick-start" icon="right-arrow" variant="secondary">Video Tutorials</LinkButton>
+</div>
