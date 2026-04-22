@@ -1,21 +1,46 @@
 ---
-title: Choosing a Review Region
-description: How to define the area of your scene to capture for review.
+title: Choosing and Exporting a Review Region
+description: How to define the area of your scene to capture for review using the Grid or Spline tool.
 sidebar:
     order: 4
 ---
 
 A **review region** defines the area of your scene that Shale will capture. It determines where capture nodes are placed — each node is a position a reviewer can jump to and look around from.
 
-## Grid vs Spline
+![Blender Plugin Install 1](/images/screenshots/Shale%20Blender%20Capture%20Basics%201.png)
 
-Shale offers two tools for defining a capture region:
+Shale offers two tools for defining a capture region. Go to the **Capture** tab and click **Add Grid** or **Add Spline** to place one in your scene.
 
-- **Grid** — places capture nodes in a 3D volumetric cage. Good for covering a defined area or room uniformly, where reviewers should be able to stand anywhere within the space.
-- **Spline** — places capture nodes along a path. Good for corridors, walkways, or any space where you want to guide the reviewer along a specific route.
+## Grid
 
-Both tools work in full 3D — X, Y, and Z — so they can cover multi-level spaces and environments with vertical complexity.
+The **Shale Grid** places capture nodes in a 3D volumetric cage over your scene. When you export, Shale captures a 360° view at each node and assembles them into a navigable environment.
 
-Go to the **Capture** tab in the Shale panel and click **Add Grid** or **Add Spline** to place a region in your scene.
+Good for open spaces or rooms where reviewers should be able to stand anywhere within the area.
 
-See the [Grid Tool](./grid-tool) and [Spline Tool](./spline-tool) pages for detailed settings.
+**Adding a Grid** — click **Add Grid** in the Capture tab. A cyan wireframe cage (labelled `ShaleGrid`) will appear in your viewport. Move, rotate, and scale it like any other Blender object to position it over the area you want captured.
+
+**Grid Settings** — with the ShaleGrid selected, the Capture tab shows:
+
+| Setting | Description |
+|---|---|
+| **X / Y / Z** | Number of capture nodes along each axis. A 3×3×3 grid places 27 nodes across the volume. |
+| **Size** | The physical size of the grid in metres. |
+| **Draw Color** | The display colour of the cage in the viewport — doesn't affect the capture. |
+| **Capture Distance** | How far from each node the scene is rendered. Default is 100m. |
+
+**Preview** — click **Show Preview** under Capture Preview to see a preview of what will be captured from the current node positions before committing to a full export.
+
+
+## Spline
+
+The **ShaleSpline** places capture nodes along a curve through your scene.
+
+Good for corridors, walkways, or any space where you want to guide the reviewer along a specific route rather than covering a full volume. Like the Grid, the Spline is fully 3D — control points can be at different heights, making it suitable for staircases, ramps, or multi-level paths.
+
+**Adding a Spline** — click **Add Spline** in the Capture tab. A spline object will appear in your viewport. Edit its control points in Edit Mode to route the path through your scene — capture nodes are placed at the vertices of the spline.
+
+## Exporting
+
+Once your region is positioned, click **Export Version** in the Capture tab. Shale renders a 360° view at every node and uploads them to your linked asset in the Shale portal.
+
+![Blender Plugin Install 1](/images/screenshots/Shale%20Blender%20Grid%20Tool%201%201.png)
