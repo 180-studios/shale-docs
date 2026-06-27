@@ -2,8 +2,6 @@
 The documentation site for Shale
 
 
-
-
 based on astro
 
 

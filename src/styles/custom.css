@@ -40,6 +40,32 @@ h1, h2, h3, h4, h5, h6,
   font-weight: 700;
 }
 
+.sl-markdown-content h2 {
+  border-left: 3px solid #ef4723;
+  padding-left: 0.75rem;
+}
+
+.sl-markdown-content hr {
+  border-color: #ef4723;
+  opacity: 0.4;
+}
+
+.sl-markdown-content h3 {
+  font-weight: 600;
+  color: #ffffff;
+  padding-left: 1.25rem;
+  border-left: 1px solid var(--sl-color-gray-5);
+}
+
+.sl-markdown-content h4 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #ffffff;
+  margin-bottom: 0.4rem;
+}
+
 /* ─── Dark mode backgrounds ─── */
 [data-theme='dark'] body {
   background-color: #1a1a1a;

@@ -24,6 +24,7 @@ export default defineConfig({
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/180-studios/Shale-Docs' }],
 			customCss: ['./src/styles/custom.css'],
 			sidebar: [
+				{ label: "What's New", autogenerate: { directory: '00_whats_new' } },
 				{ label: 'Getting Started', autogenerate: { directory: '01_Getting_Started' } },
 				{ label: 'Upload via Browser', autogenerate: { directory: '02_Browser_Upload' } },
 				{ label: 'Upload via Plugin', collapsed: true, autogenerate: { directory: '03_Plugin_Upload' } },
