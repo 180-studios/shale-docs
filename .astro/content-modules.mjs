@@ -1,7 +1,6 @@
 
 export default new Map([
 ["src/content/docs/00_whats_new/index.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fdocs%2F00_whats_new%2Findex.mdx&astroContentModuleFlag=true")],
-["src/content/docs/00_whats_new/june-2026.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fdocs%2F00_whats_new%2Fjune-2026.mdx&astroContentModuleFlag=true")],
 ["src/content/docs/01_Getting_Started/introduction.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fdocs%2F01_Getting_Started%2Fintroduction.mdx&astroContentModuleFlag=true")],
 ["src/content/docs/01_Getting_Started/Keyboard and UI Shortcuts.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fdocs%2F01_Getting_Started%2FKeyboard+and+UI+Shortcuts.mdx&astroContentModuleFlag=true")],
 ["src/content/docs/01_Getting_Started/seismiq-use-cases.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fdocs%2F01_Getting_Started%2Fseismiq-use-cases.mdx&astroContentModuleFlag=true")],
